@@ -37,14 +37,10 @@ def generate_report(students, grades, average, math_students):
 
 
 def save_report(report, filename):
-    try:
-        with open(filename, 'w') as file:
-            file.write(str(report))  # write the string directly
-        print(f"Detailed report saved to {filename}")
-        return True
-    except Exception as e:
-        print(f"Error generating report: {e}")
-        return False
+    with open(filename, 'w') as file:
+        file.write(str(report))  # write the string directly
+    print(f"Detailed report saved to {filename}")
+    
 
 def main(myfile):
     students = load_students(myfile)
