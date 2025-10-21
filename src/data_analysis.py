@@ -16,7 +16,7 @@ def load_students(filename):
   return students
 
 
-def count_average_grade(grades):
+def calculate_average_grade(grades):
     if not grades:
         return 0 
     return sum(grades)/len(grades)
@@ -47,7 +47,7 @@ def save_report(report, filename):
 def main(myfile):
     students = load_students(myfile)
     grades = [student['grade'] for student in students]
-    average = count_average_grade(grades)
+    average = calculate_average_grade(grades)
     math_students = count_math_students(students)
     filename = "student_analysis.txt"
     report = generate_report(students, grades, average, math_students)
