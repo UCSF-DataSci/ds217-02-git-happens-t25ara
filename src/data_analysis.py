@@ -34,7 +34,7 @@ def generate_report(students, grades, average, math_students):
     print("Grades\n", grades)
     print(f"Average Grade:\n {average:.1f}")
     print("Number of Math Students\n", math_students)
-    report = (f"____REPORT_____\nAverage Grade:{average:.1f}\nNumber of Math Students:\n{math_students}")
+    report = (f"____REPORT_____\nAverage Grade:{average:.1f}\nNumber of Math Students:{math_students}")
     return(report)
 
 
@@ -44,8 +44,8 @@ def save_report(report, filename):
     print(f"report saved")
     
 
-def main(myfile):
-    students = load_students(myfile)
+def main():
+    students = load_students("data/students.csv")
     grades = [student['grade'] for student in students]
     average = calculate_average_grade(grades)
     math_students = count_math_students(students)
@@ -54,5 +54,5 @@ def main(myfile):
     save_report(report, "output/analysis_report.txt")
     print("analysis complete results saved to analysis_report.txt")
 
-myfile = "/Users/tara/Documents/UCSF/DATASCI_217/ds217-02-git-happens-t25ara-1/data/students.csv"
-main(myfile)
+if __name__ == "__main__":
+    main()

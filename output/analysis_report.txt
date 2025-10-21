@@ -1,4 +1,3 @@
 ____REPORT_____
 Average Grade:85.9
- Number of Math Students:
-3
+Number of Math Students:3
