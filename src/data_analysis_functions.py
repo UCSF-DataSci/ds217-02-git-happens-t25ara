@@ -212,7 +212,6 @@ def main():
     # Step 3: Save the results
     print("\n[Step 3] Saving results to file...")
     save_results(results, 'output/analysis_results.txt')
-    
     print("\n" + "=" * 50)
     print("ANALYSIS COMPLETE!")
     print("=" * 50)

@@ -34,7 +34,7 @@ def generate_report(students, grades, average, math_students):
     print("Grades\n", grades)
     print(f"Average Grade:\n {average:.1f}")
     print("Number of Math Students\n", math_students)
-    report = (f"____REPORT_____\nAverage Grade:{average:.1f}\nNumber of Math Students:{math_students}")
+    report = (f"Analysis____REPORT_____\nAverage Grade:{average:.1f}\nNumber of Math Students:{math_students}")
     return(report)
 
 
